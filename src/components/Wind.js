@@ -36,7 +36,7 @@ const Wind = () => {
               <ion-icon name="location-outline"></ion-icon>
               {search}
             </h2>
-            <h1 className="temp">{city.speed} Km/h</h1>
+            <h1 className="temp">{city?.speed} Km/h</h1>
           </div>
         )}
 

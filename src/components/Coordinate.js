@@ -37,7 +37,7 @@ const Coordinate = () => {
               {search}
             </h2>
             <h1 className="temp">
-              {city.lon.toFixed(2)} | {city.lat.toFixed(2)}
+              {city?.lon.toFixed(2)} | {city?.lat.toFixed(2)}
             </h1>
           </div>
         )}
