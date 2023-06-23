@@ -6,13 +6,13 @@ const Coordinate = () => {
   const [city, setCity] = useState(null);
   const [search, setSearch] = useState("Pune");
 
-  const fetchApi = async () => {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=2f83bf57758a27fd28acf86fc2dcb429`;
-    const response = await fetch(url);
-    const resJson = await response.json();
-    setCity(resJson.coord);
-  };
   useEffect(() => {
+    const fetchApi = async () => {
+      const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=2f83bf57758a27fd28acf86fc2dcb429`;
+      const response = await fetch(url);
+      const resJson = await response.json();
+      setCity(resJson.coord);
+    };
     fetchApi();
   }, [search]);
   return (
